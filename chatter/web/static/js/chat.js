@@ -36,6 +36,9 @@ class Chat {
 
     // Set up new message handler
     this.room.on('message:new', this.renderMessage)
+    this.room.on('messages:recent', ({data: messages}) => {
+      messages.map(this.renderMessage)
+    })
 
     // Set up input handlers
     this.messageInput.addEventListener('keypress', (e) => {
@@ -51,7 +54,7 @@ class Chat {
 
   formatTimestamp (timestamp) {
     let date = new Date(timestamp)
-    return date.toLocaleTimeString()
+    return date.toISOString()
   }
 
   formatPresences (presences) {
