@@ -1,0 +1,27 @@
+// import utils 1st
+@import 'utils/_functions';
+@import 'utils/_mixins';
+@import 'utils/_variables';
+
+// import vendors 2nd
+
+
+// import base 3rd
+@import 'base/_color';
+@import 'base/_reset';
+@import 'base/_typography';
+
+// import layout 4th
+@import 'layout/_footer';
+@import 'layout/_forms';
+@import 'layout/_header';
+
+// import components 5th
+@import 'components/_buttons';
+@import 'components/_navigation';
+
+// import pages 6th
+@import 'pages/_home';
+
+// import themes last
+@import 'themes/_theme';
