@@ -20,7 +20,10 @@ exports.config = {
       // }
     },
     stylesheets: {
-      joinTo: "css/app.css"
+      joinTo: "css/app.css",
+      order: {
+        after: ["scss/main.scss"]
+      }
     },
     templates: {
       joinTo: "js/app.js"
@@ -37,7 +40,7 @@ exports.config = {
   // Phoenix paths configuration
   paths: {
     // Dependencies and current project directories to watch
-    watched: ["static", "css", "js", "vendor"],
+    watched: ["static", "css", "js", "scss", "vendor"],
     // Where to compile files to
     public: "../priv/static"
   },
