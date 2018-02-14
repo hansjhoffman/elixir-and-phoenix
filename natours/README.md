@@ -9,7 +9,9 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## TODO
-- [ ] Add SCSS setup using the [7–1 pattern from Hugo Giraudel](https://www.sitepoint.com/architecture-sass-project/)
+- [x] Add SCSS setup using the [7–1 pattern from Hugo Giraudel](https://www.sitepoint.com/architecture-sass-project/)
+- [ ] Follow Block Element Modifier class format (.block__element-modifier)
+- [ ] Ensure css is responsive
 - [ ] Add React
 
 ## Screenshots

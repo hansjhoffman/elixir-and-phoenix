@@ -38,16 +38,16 @@
   opacity: 0; //btn fades out
 }
 
-.btn-white {
+.btn--white {
   background-color: $porcelain;
   color: $boulder;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: $porcelain;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; //run animation backwards
 }
