@@ -10,6 +10,7 @@
 @import 'base/color';
 @import 'base/base';
 @import 'base/typography';
+@import 'base/utils';
 
 // import layout 4th
 @import 'layout/grid';
@@ -20,6 +21,7 @@
 // import components 5th
 @import 'components/buttons';
 @import 'components/navigation';
+@import 'components/composition';
 
 // import pages 6th
 @import 'pages/home';

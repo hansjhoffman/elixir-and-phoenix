@@ -13,7 +13,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6); //btn grows
@@ -23,7 +23,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba($black, 0.2);
   }
 
   &::after {
@@ -51,5 +51,30 @@
   &--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; //run animation backwards
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: .1rem solid $pastel_green;
+    padding: .3rem;
+    color: $pastel_green;
+    font-size: 1.6rem;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $pastel_green;
+    color: $porcelain;
+    box-shadow: 0 1rem 2rem rgba($black, .15);
+    transform: translateY(-.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem rgba($black, .15);
+    transform: translate(0);
   }
 }
