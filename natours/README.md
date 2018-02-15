@@ -10,7 +10,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## TODO
 - [x] Add SCSS setup using the [7–1 pattern from Hugo Giraudel](https://www.sitepoint.com/architecture-sass-project/)
-- [ ] Follow Block Element Modifier class format (.block__element-modifier)
+- [ ] Follow [Block Element Modifier(BEM)](http://vanseodesign.com/css/sass-directory-structures/) class format
 - [ ] Ensure css is responsive
 - [ ] Add React
 

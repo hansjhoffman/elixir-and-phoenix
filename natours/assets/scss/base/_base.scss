@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; //force children inheritance, community practice :)
+}
+
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //defines what 1rem is from default browser's font-size of 16px
+}

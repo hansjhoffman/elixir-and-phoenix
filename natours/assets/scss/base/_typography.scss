@@ -4,9 +4,32 @@ body {
   line-height: 1.7;
   color: $boulder;
   padding: 3rem;
-  box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%; //from default browser's font-size of 16px
+.heading-primary {
+  color: $porcelain;
+  text-transform: uppercase;
+  backface-visibility: hidden; //hides shake?
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    // animation-delay: 3s;
+    // animation-iteration-count: 3;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; //shorthand
+  }
 }
