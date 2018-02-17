@@ -15,19 +15,6 @@
 
   <body>
     <div class="">
-      <header class="header">
-        <div class="header__logo-box">
-          <img class="header__logo" src="<%= static_path(@conn, "/images/logo-white.png") %>" alt="Natours Logo">
-        </div>
-        <div class="header__text-box">
-          <h1 class="heading-primary">
-            <span class="heading-primary--main">Outdoors</span>
-            <span class="heading-primary--sub">is where life happens</span>
-          </h1>
-          <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
-        </div>
-      </header>
-
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
@@ -35,7 +22,7 @@
         <%= render @view_module, @view_template, assigns %>
       </main>
 
-    </div> <!-- /container -->
+    </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

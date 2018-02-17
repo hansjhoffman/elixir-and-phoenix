@@ -48,6 +48,15 @@
     }
   }
 
+  &--green {
+    background-color: $emerald;
+    color: $porcelain;
+
+    &::after {
+      background-color: $emerald;
+    }
+  }
+
   &--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; //run animation backwards
