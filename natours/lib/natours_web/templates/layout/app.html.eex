@@ -45,7 +45,10 @@
 
   <footer class="footer">
     <div class="footer__logo-box">
-      <img class="footer__logo" src="<%= static_path(@conn, "/images/logo-green-2x.png") %>" alt="Footer Logo">
+      <picture class="footer__logo">
+        <source srcset="<%= static_path(@conn, "/images/logo-green-small-1x.png") %> 1x, <%= static_path(@conn, "/images/logo-green-small-2x.png") %> 2x" media="(max-width: 37.5em)">
+        <img srcset="<%= static_path(@conn, "/images/logo-green-1x.png") %> 1x, <%= static_path(@conn, "/images/logo-green-2x.png") %> 2x" alt="Footer Logo" srcs="<%= static_path(@conn, "/images/logo-green-1x.png") %>">
+      </picture>
     </div>
     <div class="row">
       <div class="col-1-of-2">
