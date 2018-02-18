@@ -10,11 +10,28 @@
     <title>Natours | Exciting tours for adventurous people</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link rel="shortcut icon" type="image/png" href="<%= static_path(@conn, "/favicon.png") %>" >
+    <link rel="shortcut icon" type="image/png" href="<%= static_path(@conn, "/favicon.png") %>">
   </head>
 
   <body>
-    <div class="">
+    <div class="nav">
+      <input id="nav-toggle" class="nav__checkbox" type="checkbox" name="nav">
+      <label class="nav__btn" for="nav-toggle">
+        <span class="nav__icon"></span>
+      </label>
+      <div class="nav__background">&nbsp;</div>
+      <nav class="nav__container">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#"><span>01</span>About Natours</a></li>
+          <li class="nav__item"><a class="nav__link" href="#"><span>02</span>Your Benefits</a></li>
+          <li class="nav__item"><a class="nav__link" href="#"><span>03</span>Popular Tours</a></li>
+          <li class="nav__item"><a class="nav__link" href="#"><span>04</span>Stories</a></li>
+          <li class="nav__item"><a class="nav__link" href="#"><span>05</span>Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
@@ -25,4 +42,30 @@
     </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <img class="footer__logo" src="<%= static_path(@conn, "/images/logo-green-2x.png") %>" alt="Footer Logo">
+    </div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="#">Company</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Privacy</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <p class="footer__copyright">
+          Built by me for Jonas Schmedtmann's
+          <a class="footer__link" href="https://www.udemy.com/advanced-css-and-sass">Udemy Course</a>.<br/>
+          Copyright &copy; Jonas Schmedtmann.
+        </p>
+      </div>
+    </div>
+  </footer>
 </html>

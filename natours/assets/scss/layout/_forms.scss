@@ -1,0 +1,94 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: .2rem;
+    background-color: rgba($porcelain, .5);
+    border-bottom: .3rem solid transparent;
+    border: none;
+    width: 90%;
+    display: block;
+    color: inherit;
+    transition: all .3s;
+
+    &::webkit-input-placeholder { //only works on Safari & Chrome right now
+      color: $alabaster;
+    }
+
+    &:focus:invalid {
+      border-bottom: .3rem solid $burning_orange;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($black, .1);
+      border-bottom: .3rem solid $emerald;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+  }
+
+  &__input:placeholder-shown + &__label { //use adjacent sibling selector
+    opacity: 0; //we include opacity because we can't animate 'visibility'
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-input {
+    display: none; //remove 2nd radio button -> don't use visibility: hidden
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-btn::after {
+    opacity: 1;
+  }
+
+  &__radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-btn {
+    height: 3rem;
+    width: 3rem;
+    border: .5rem solid $emerald;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -.4rem;
+    left: 0;
+
+    &::after {
+      content: ""; //must set content on any pseudo element
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $emerald;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+}

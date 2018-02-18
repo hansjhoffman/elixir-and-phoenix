@@ -170,7 +170,6 @@
       </div>
     </div>
   </div>
-
   <div class="center-text margin-top-lg">
     <a href="#" class="btn btn--green btn--animated">Discover all tours</a>
   </div>
@@ -184,18 +183,15 @@
       Your browser does not support the video tag.
     </video>
   </div>
-
   <div class="center-text margin-bottom-lg">
     <h2 class="heading-secondary">We make people genuinely happy</h2>
   </div>
-
   <div class="row">
     <div class="story">
       <figure class="story__shape">
         <figcaption class="story__caption">Mary Smith</figcaption>
         <img src="<%= static_path(@conn, "/images/nat-8.jpg") %>" alt="Person on a tour" class="story__image">
       </figure>
-
       <div class="story__text">
         <h3 class="heading-tertiary margin-bottom-sm">I had the best week ever with my family.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi quis nostrud exercitation ullamco.</p>
@@ -209,15 +205,54 @@
         <figcaption class="story__caption">Jack Wilson</figcaption>
         <img src="<%= static_path(@conn, "/images/nat-9.jpg") %>" alt="Person on a tour" class="story__image">
       </figure>
-
       <div class="story__text">
         <h3 class="heading-tertiary margin-bottom-sm">Wow! My life is completely different now.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi quis nostrud exercitation ullamco.</p>
       </div>
     </div>
   </div>
-
   <div class="center-text margin-top-lg">
     <a href="#" class="btn-text">Read all stories &rarr;</a>
+  </div>
+</section>
+
+<section class="section-booking">
+  <div class="row">
+    <div class="booking">
+      <div class="booking__form">
+        <form id="booking-form" class="form" action="#" method="post">
+          <div class="margin-bottom-sm">
+            <h2 class="heading-secondary">Start bookin now</h2>
+          </div>
+          <div class="form__group">
+            <input id="full_name" type="text" placeholder="Full Name" class="form__input" required>
+            <label for="full_name" class="form__label">Full Name</label>
+          </div>
+          <div class="form__group">
+            <input id="email" type="email" placeholder="Email Address" class="form__input" required>
+            <label for="email" class="form__label">Email Address</label>
+          </div>
+          <div class="form__group">
+            <div class="form__radio-group">
+              <input id="small" type="radio" name="group-size" class="form__radio-input">
+              <label for="small" class="form__radio-label">
+                <span class="form__radio-btn"></span>
+                Small tour group
+              </label>
+            </div>
+            <div class="form__radio-group">
+              <input id="large" type="radio" name="group-size" class="form__radio-input">
+              <label for="large" class="form__radio-label">
+                <span class="form__radio-btn"></span>
+                Large tour group
+              </label>
+            </div>
+          </div>
+          <div class="form__group margin-top-sm">
+            <button class="btn btn--green" type="submit" form="booking-form">Next step &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
