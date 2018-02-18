@@ -2,8 +2,17 @@
   max-width: $grid-width;
   margin: 0 auto; //trick to center block inside of another block element
 
+  @include respond(tablet_portrait) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tablet_portrait) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -13,6 +22,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tablet_portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tablet_portrait) {
+      width: 100% !important;
     }
   }
 

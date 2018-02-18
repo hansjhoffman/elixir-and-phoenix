@@ -8,14 +8,26 @@
 
 .margin-bottom-sm {
   margin-bottom: 4rem !important;
+
+  @include respond(tablet_portrait) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .margin-bottom-md {
   margin-bottom: 6rem !important;
+
+  @include respond(tablet_portrait) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .margin-bottom-lg {
   margin-bottom: 8rem !important;
+
+  @include respond(tablet_portrait) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .margin-top-xs {
@@ -24,12 +36,24 @@
 
 .margin-top-sm {
   margin-top: 4rem !important;
+
+  @include respond(tablet_portrait) {
+    margin-top: 1rem !important;
+  }
 }
 
 .margin-top-md {
   margin-top: 6rem !important;
+
+  @include respond(tablet_portrait) {
+    margin-top: 3rem !important;
+  }
 }
 
 .margin-top-lg {
   margin-top: 8rem !important;
+
+  @include respond(tablet_portrait) {
+    margin-top: 5rem !important;
+  }
 }

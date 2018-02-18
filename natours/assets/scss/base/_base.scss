@@ -8,8 +8,29 @@
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tablet_portrait) {
+    padding: 0;
+  }
 }
 
 html {
-  font-size: 62.5%; //defines what 1rem is from default browser's font-size of 16px
-}
+  font-size: 62.5%; //defines what 1rem is from default browser's font-size of 16px. 1rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tablet_landscape) {
+    font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
+  }
+
+  @include respond(tablet_portrait) {
+    font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 45%; // 1rem = 7.2px; 7.2px/16px = 45%
+  }
+
+  @include respond(big_desktop) {
+    font-size: 75%; // 1rem = 12px; 12px/16px = 75%
+  }
+} //ORDER: Base -> Typography -> General Layouts -> Grid -> Page Layouts -> Components

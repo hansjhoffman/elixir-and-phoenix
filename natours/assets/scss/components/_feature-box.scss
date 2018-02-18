@@ -7,6 +7,10 @@
   box-shadow: 0 1.5rem 4rem rgba($black, .15);
   transition: transform .3s;
 
+  @include respond(tablet_portrait) {
+    padding: 2rem;
+  }
+
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
   }
@@ -18,5 +22,9 @@
     -webkit-background-clip: text;
     background-image: linear-gradient(to right, $pastel_green, $emerald);
     color: transparent;
+
+    @include respond(tablet_portrait) {
+      margin-bottom: 0;
+    }
   }
 }
