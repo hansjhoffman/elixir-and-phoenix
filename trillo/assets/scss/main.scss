@@ -1,0 +1,26 @@
+// import abstracts 1st
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// import vendors 2nd
+
+// import base 3rd
+@import 'base/color';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utils';
+
+// import layout 4th
+@import 'layout/footer';
+@import 'layout/forms';
+@import 'layout/header';
+
+// import components 5th
+@import 'components/navigation';
+
+// import pages 6th
+@import 'pages/home';
+
+// import themes last
+@import 'themes/theme';
