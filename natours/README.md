@@ -14,6 +14,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 - [x] Ensure css is responsive
 - [ ] Add javascript to follow links in nav
 - [ ] Add javascript to close popup when use clicks outside the content
+- [ ] Fix bug with favicon not showing
 
 ## Screenshots
-<!-- ![Home Page][./screenhots/homepage.jpg] -->
+[Home Page][./screenhots/combined.png]
