@@ -17,4 +17,4 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 - [x] Fix bug with favicon not showing
 
 ## Screenshots
-[Home Page][./screenhots/combined.png]
+![Home Page](.screenshots/combined.png)
