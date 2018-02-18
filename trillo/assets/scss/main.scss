@@ -6,6 +6,7 @@
 // import vendors 2nd
 
 // import base 3rd
+@import 'base/animations';
 @import 'base/color';
 @import 'base/base';
 @import 'base/typography';
@@ -15,9 +16,11 @@
 @import 'layout/footer';
 @import 'layout/forms';
 @import 'layout/header';
+@import 'layout/grid';
 
 // import components 5th
 @import 'components/navigation';
+@import 'components/buttons';
 
 // import pages 6th
 @import 'pages/home';

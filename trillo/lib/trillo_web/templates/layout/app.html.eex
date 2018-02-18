@@ -10,7 +10,7 @@
     <title>Trillo &mdash; Your all-in-one booking app</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link rel="shortcut icon" type="image/png" href="<%= static_path(@conn, "/favicon.png") %>">
+    <link rel="shortcut icon" type="image/png" href="<%= static_path(@conn, "/images/favicon.png") %>">
   </head>
 
   <body>
