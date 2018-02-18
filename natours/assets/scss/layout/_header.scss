@@ -4,9 +4,9 @@
   background-image:
     linear-gradient(to right bottom, rgba($pastel_green, 0.8), rgba($emerald, 0.8)),
     url(/images/hero-small.jpg);
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-         (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em), //safari doesn't support min-resolution
-         (min-width: 125em) { //125em = 2000px
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+         only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em), //safari doesn't support min-resolution
+         only screen and (min-width: 125em) { //125em = 2000px
     background-image:
       linear-gradient(to right bottom, rgba($pastel_green, 0.8), rgba($emerald, 0.8)),
       url(/images/hero.jpg);

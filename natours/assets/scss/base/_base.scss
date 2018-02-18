@@ -34,3 +34,8 @@ html {
     font-size: 75%; // 1rem = 12px; 12px/16px = 75%
   }
 } //ORDER: Base -> Typography -> General Layouts -> Grid -> Page Layouts -> Components
+
+::selection {
+  background-color: $emerald;
+  color: $porcelain;
+}
