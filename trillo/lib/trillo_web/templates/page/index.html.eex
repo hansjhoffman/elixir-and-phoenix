@@ -1,1 +1,8 @@
-test
+<div class="content">
+  <div class="nav-sidebar">
+    Nav Sidebar
+  </div>
+  <div class="hotel-view">
+    Hotel View
+  </div>
+</div>

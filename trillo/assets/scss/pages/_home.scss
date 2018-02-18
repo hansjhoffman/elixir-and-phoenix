@@ -1,0 +1,16 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: $alabaster;
+  @include shadow-dark;
+  min-height: 50rem; //testing purposes
+}
+
+.content {
+  display: flex;
+}
+
+.hotel-view {
+  flex: 1;
+  background-color: orangered;
+}
