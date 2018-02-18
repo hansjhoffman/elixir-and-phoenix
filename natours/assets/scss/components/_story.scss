@@ -28,13 +28,17 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg); //best way to move around an element that is floated is not to mess with margins. skewX is hack for circle
     position: relative;
-
+    overflow: hidden;
+    border-radius: 50%;
+    @supports (clip-path: circle(50% at 50% 50%)) or (-webkit-clip-path: circle(50% at 50% 50%)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+    transform: translateX(-3rem) skewX(12deg); //best way to move around an element that is floated is not to mess with margins. skewX is hack for circle
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
     }
