@@ -3,15 +3,24 @@
   color: $primary;
   font-size: inherit;
   border-bottom: .1rem solid currentColor;
-  padding-bottom: .2rem;
+  padding: .3rem .5rem;
   display: inline-block;
   background-color: tranparent;
   cursor: pointer;
   transition: all .2s;
 
+  & span {
+    margin-left: .3rem;
+    transition: margin-left .2s;
+  }
+
   &:hover {
     color: $grey-dark-1;
     animation: pulsate 1s infinite;
+
+    span {
+      margin-left: .8rem;
+    }
   }
 
   &:focus {

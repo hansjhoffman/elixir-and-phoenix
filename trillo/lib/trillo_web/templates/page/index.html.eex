@@ -82,5 +82,60 @@
         <div class="overview__rating-count">429 votes</div>
       </div>
     </div>
+
+    <div class="detail">
+      <div class="description">
+        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.</p>
+        <p class="paragraph">Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.</p>
+        <ul class="list">
+          <li class="list__item">Close to the beach</li>
+          <li class="list__item">Breakfast included</li>
+          <li class="list__item">Free airport shuttle</li>
+          <li class="list__item">Free wifi in all rooms</li>
+          <li class="list__item">Air conditioning and heating</li>
+          <li class="list__item">Pets allowed</li>
+          <li class="list__item">We speak all languages</li>
+          <li class="list__item">Perfect for families</li>
+        </ul>
+        <div class="recommend">
+          <p class="recommend__count">Lucy and 3 other friends recommend this hotel.</p>
+          <div class="recommend__friends">
+            <img class="recommend__photo" src="<%= static_path(@conn, "/images/user-3.jpg") %>" alt="User Photo 3">
+            <img class="recommend__photo" src="<%= static_path(@conn, "/images/user-4.jpg") %>" alt="User Photo 4">
+            <img class="recommend__photo" src="<%= static_path(@conn, "/images/user-5.jpg") %>" alt="User Photo 5">
+            <img class="recommend__photo" src="<%= static_path(@conn, "/images/user-6.jpg") %>" alt="User Photo 6">
+          </div>
+        </div>
+      </div>
+      <div class="user-reviews">
+        <figure class="review">
+          <blockquote class="review__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe.
+          </blockquote>
+          <figcaption class="review__user">
+            <img class="review__photo" src="<%= static_path(@conn, "/images/user-1.jpg") %>" alt="User Photo 1">
+            <div class="review__user-box">
+              <p class="review__user-name">Nick Smith</p>
+              <p class="review__date">Feb 23rd, 2017</p>
+            </div>
+            <div class="review__rating">7.8</div>
+          </figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote class="review__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe.
+          </blockquote>
+          <figcaption class="review__user">
+            <img class="review__photo" src="<%= static_path(@conn, "/images/user-2.jpg") %>" alt="User Photo 2">
+            <div class="review__user-box">
+              <p class="review__user-name">Mary Thomas</p>
+              <p class="review__date">Sep 13th, 2017</p>
+            </div>
+            <div class="review__rating">9.3</div>
+          </figcaption>
+        </figure>
+        <button class="btn-inline" type="button" name="button">Show all<span>&rarr;</span></button>
+      </div>
+    </div>
   </div>
 </div>
