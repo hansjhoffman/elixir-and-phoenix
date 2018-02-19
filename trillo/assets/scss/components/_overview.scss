@@ -1,0 +1,58 @@
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: .1rem solid $grey-light-2;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    margin-right: auto; //works like flex:1 but WAY better!!
+    display: flex; //removes whitespace underneath stars
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 2rem;
+    height: 2rem;
+    fill: $primary;
+  }
+
+  &__icon-location {
+    margin-right: .5rem;
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating {
+    background-color: $primary;
+    margin-left: 3rem;
+    color: $porcelain;
+    padding: 0 2.25rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -.3rem;
+  }
+
+  &__rating-count {
+    font-size: .8rem;
+    font-weight: 300;
+  }
+}

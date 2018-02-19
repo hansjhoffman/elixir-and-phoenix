@@ -1,5 +1,6 @@
 // import abstracts 1st
 @import 'abstracts/functions';
+@import 'base/color'; //mixins requires color
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
@@ -7,7 +8,6 @@
 
 // import base 3rd
 @import 'base/animations';
-@import 'base/color';
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utils';
@@ -20,6 +20,8 @@
 // import components 5th
 @import 'components/navigation';
 @import 'components/buttons';
+@import 'components/gallery';
+@import 'components/overview';
 
 // import pages 6th
 @import 'pages/home';

@@ -1,0 +1,12 @@
+.gallery {
+  display: flex;
+
+  // &__item {
+  //
+  // }
+
+  &__photo {
+    width: 100%; //always define width & height of responsive images in percentages!!
+    display: block; //image should always be block or inline block to avoid unwanted whitespace
+  }
+}

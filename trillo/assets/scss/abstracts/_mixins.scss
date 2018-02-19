@@ -1,3 +1,7 @@
 @mixin shadow-dark {
   box-shadow: 0 2rem 6rem rgba($black, .3);
 }
+
+@mixin shadow-light {
+  box-shadow: 0 1rem 4rem rgba($black, .25);
+}
