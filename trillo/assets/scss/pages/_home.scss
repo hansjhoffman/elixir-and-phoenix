@@ -1,7 +1,7 @@
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: $alabaster;
+  background-color: $grey-light-1;
   @include shadow-dark;
   min-height: 50rem; //testing purposes
 }
@@ -13,4 +13,5 @@
 .hotel-view {
   flex: 1;
   background-color: orangered;
+  height: 80rem; //testing purpose
 }

@@ -1,5 +1,7 @@
 # Natours
+Project 1 in Jonas Schmedtmann's 'Advanced CSS & Sass' Udemy course. Introduces SCSS, icon fonts, grid and CSS animations.
 
+## Run
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

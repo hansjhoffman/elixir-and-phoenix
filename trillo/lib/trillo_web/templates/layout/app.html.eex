@@ -22,8 +22,30 @@
         <img class="logo" src="<%= static_path(@conn, "/images/logo.png") %>" alt="Trillo logo">
         <form class="search" action="index.html" method="post">
           <input class="search__input" type="text" name="search" placeholder="Search hotels">
-          <button type="button" name="button"></button>
+          <button class="search__button" type="button" name="search">
+            <svg class="search__icon">
+              <use xlink:href="/images/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
         </form>
+        <div class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="search__icon">
+              <use xlink:href="/images/sprite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </div>
+          <div class="user-nav__icon-box">
+            <svg class="search__icon">
+              <use xlink:href="/images/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">13</span>
+          </div>
+          <div class="user-nav__user">
+            <img class="user-nav__user-photo" src="<%= static_path(@conn, "/images/user.jpg") %>" alt="User photo">
+            <span class="user-nav__user-name">Jonas</span>
+          </div>
+        </div>
       </header>
 
       <main role="main">
