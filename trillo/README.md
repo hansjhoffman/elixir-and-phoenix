@@ -16,6 +16,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ## TODO
 - [x] Add SVG icons (https://icomoon.io/app --> Entypo+)
 - [x] Ensure responsive web design but this time use the methodology of "where does the design break?" instead of device breakpoints
+- [ ] Add autoprefixer for more modern browser support
 
 ## Screenshots
 ![Home Screen](.screenshots/combined.png)
