@@ -11,11 +11,24 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $breakpoint-md) {
+    display: flex;
+    margin-top: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: .5rem;
+
+      @media only screen and (max-width: $breakpoint-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-md) {
+      flex: 1;
     }
   }
 
@@ -31,7 +44,7 @@
     transition:
       transform .2s,
       width .4s cubic-bezier(1, 0, 0, 1) .2s, //change speed to 1s to see they scaleY in action! Note: transform-origin defaults to center
-      background-color .1s; 
+      background-color .1s;
   }
 
   &__item:hover::before,
@@ -55,6 +68,16 @@
     align-items: center;
     position: relative; //must have if you're using z-index like we are below
     z-index: 10;
+
+    @media only screen and (max-width: $breakpoint-md) {
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      padding: 1.5rem .5rem;
+    }
   }
 
   &__icon {
@@ -62,16 +85,16 @@
     width: 2rem;
     margin-right: 2rem;
     fill: currentColor; //of parent element -> nav-sidebar__link. really powerful!!
+
+    @media only screen and (max-width: $breakpoint-sm) {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
-  &__icon-text {
-
-  }
-}
-
-.copyright {
-  font-size: 1.2rem;
-  text-align: center;
-  color: $grey-light-4;
-  padding: 2.5rem;
+  // &__icon-text {
+  //
+  // }
 }

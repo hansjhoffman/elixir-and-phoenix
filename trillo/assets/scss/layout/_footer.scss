@@ -1,0 +1,10 @@
+.copyright {
+  font-size: 1.2rem;
+  text-align: center;
+  color: $grey-light-4;
+  padding: 2.5rem;
+
+  @media only screen and (max-width: $breakpoint-md) {
+    display: none;
+  }
+}

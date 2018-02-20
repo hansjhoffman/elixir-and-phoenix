@@ -4,6 +4,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $breakpoint-xs) {
+    order: 1; //see header flex-wrap for other half of solution
+    flex: 0 0 100%;
+    background-color: $grey-light-2;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;

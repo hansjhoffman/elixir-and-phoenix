@@ -3,10 +3,20 @@
   margin: 8rem auto;
   background-color: $grey-light-1;
   @include shadow-dark;
+
+  @media only screen and (max-width: $breakpoint-xl) { //desktop first stratgey so we use max-width instead of min-width
+    margin: 0;
+    max-width: 100%; // takes care of pink border coming back up
+    width: 100%;
+  }
 }
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $breakpoint-md) {
+    flex-direction: column;
+  }
 }
 
 .hotel-view {
@@ -19,6 +29,14 @@
   background-color: $grey-light-2;
   border-bottom: $line;
   font-size: 1.4rem;
+
+  @media only screen and (max-width: $breakpoint-md) { //put bigger one first
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $breakpoint-sm) {
+    flex-direction: column;
+  }
 }
 
 .paragraph:not(:last-of-type) { //only paragraphs... technically list is :last-child
@@ -32,6 +50,16 @@
   flex: 0 0 60%;
   margin-right: 4.5rem;
   font-size: 1.4rem;
+
+  @media only screen and (max-width: $breakpoint-md) {
+    padding: 2rem;
+    margin-right: 3
+  }
+
+  @media only screen and (max-width: $breakpoint-sm) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .list {
@@ -54,13 +82,17 @@
     width: 1rem;
     margin-right: .7rem;
 
-    // background-image: url(/images/chevron-thin-right.svg); //for older browsers
-    // background-size: cover;
-    background-color: $primary;
-    -webkit-mask-image: url(/images/chevron-thin-right.svg); //we use this trick since we can't change color of background-image
-    -webkit-mask-size: cover;
-    mask-image: url(/images/chevron-thin-right.svg); //we use this trick since we can't change color of background-image
-    mask-size: cover;
+    background-image: url(/images/chevron-thin-right.svg); //for older browsers
+    background-size: cover;
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: $primary;
+      -webkit-mask-image: url(/images/chevron-thin-right.svg); //we use this trick since we can't change color of background-image
+      -webkit-mask-size: cover;
+      mask-image: url(/images/chevron-thin-right.svg); //we use this trick since we can't change color of background-image
+      mask-size: cover;
+      background-image: none;
+    }
   }
 }
 
@@ -74,9 +106,9 @@
     margin-right: auto;
   }
 
-  // &__friends {
-  //
-  // }
+  &__friends {
+    display: flex;
+  }
 
   &__photo {
     box-sizing: content-box; //does not include padding into the height and width of box like border-box
@@ -86,7 +118,7 @@
     border: .3rem solid $porcelain;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }

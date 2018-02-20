@@ -27,3 +27,51 @@
     outline: none;
   }
 }
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, $primary_light, $primary_dark);
+  color: $porcelain;
+  position: relative;
+  overflow: hidden; //__invisible part is technically now outside of element so this will hide it
+  cursor: pointer;
+
+  & > * { //select all direct children
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+  }
+
+  &__visible {
+    padding: 2.5rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 2.5rem 2.5rem;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, $primary_light, $primary_dark);
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
