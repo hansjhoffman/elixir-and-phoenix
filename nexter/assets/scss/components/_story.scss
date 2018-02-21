@@ -1,0 +1,11 @@
+.story {
+  &__pictures {
+    background-color: cyan;
+    grid-column: 2 / 7;
+  }
+
+  &__content {
+    background-color: lightgreen;
+    grid-column: 7 / -1;
+  }
+}
