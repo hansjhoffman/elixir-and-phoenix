@@ -1,4 +1,78 @@
 .homes {
-  background-color: pink;
   grid-column: 3 / 11;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+  margin: 15rem 0;
+}
+
+.home {
+  background-color: $grey-light-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem;
+
+  &__img {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    z-index: 1; //not really needed but let's be sure
+  }
+
+  &__name {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 1;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: $color-secondary;
+    color: $porcelain;
+    width: 80%;
+    justify-self: center;
+    align-self: end;
+    transform: translateY(50%);
+  }
+
+  &__like {
+    fill: $color-primary;
+    height: 2.5rem;
+    width: 2.5rem;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    z-index: 2; //not really needed but let's be sure
+    justify-self: end;
+    margin: 1rem;
+  }
+
+  &__location,
+  &__rooms,
+  &__size,
+  &__price {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: $color-primary;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__location,
+  &__rooms {
+    margin-top: 2.5rem;
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+  }
 }

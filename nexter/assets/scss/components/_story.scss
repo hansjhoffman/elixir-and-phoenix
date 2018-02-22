@@ -1,11 +1,50 @@
 .story {
   &__pictures {
-    background-color: cyan;
+    background-image: 
+      linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)),
+      url(/images/back.jpg);
     grid-column: 2 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+  }
+
+  &__img--1 { //images try to keep their aspect ratio so they work diffently in grids
+    width: 100%;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    box-shadow: 0 2rem 5rem rgba($black, .1);
+  }
+
+  &__img--2 {
+    width: 115%;
+    grid-row: 4 / 6;
+    grid-column: 4 / 7;
+    z-index: 1;
+    box-shadow: 0 2rem 5rem rgba($black, .2);
   }
 
   &__content {
-    background-color: lightgreen;
+    background-color: $grey-light-1;
     grid-column: 7 / -1;
+    padding: 6rem 8vw; //don't hardcode 12rem left/right
+
+    // flexbox implementation for 1 dimension
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-start;
+
+    // css grid implementation works too
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
