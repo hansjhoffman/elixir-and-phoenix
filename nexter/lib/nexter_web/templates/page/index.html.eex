@@ -1,14 +1,41 @@
 <div class="container">
   <div class="sideNav">
-    sideNav
+    <button class="btn-nav" type="button" name="button"></button>
   </div>
 
   <header class="header">
-    Header
+    <img class="header__logo" src="<%= static_path(@conn, "/images/logo.png") %>" alt="Nexter logo">
+    <h3 class="heading-3">Your own home:</h3>
+    <h1 class="heading-1">The ultimate personal freedom</h1>
+    <button class="btn header__btn" type="button" name="button">View our properties</button>
+    <div class="header__seenon-text">Seen on</div>
+    <div class="header__seenon-logos">
+      <img src="<%= static_path(@conn, "/images/logo-bbc.png") %>" alt="BBC logo">
+      <img src="<%= static_path(@conn, "/images/logo-forbes.png") %>" alt="Forbes logo">
+      <img src="<%= static_path(@conn, "/images/logo-techcrunch.png") %>" alt="Techcrunch logo">
+      <img src="<%= static_path(@conn, "/images/logo-bi.png") %>" alt="Business Insider logo">
+    </div>
   </header>
 
   <div class="realtors">
-    Realtors
+    <h3 class="heading-3">Top 3 Realtors</h3>
+    <div class="realtors__list">
+      <img src="<%= static_path(@conn, "/images/realtor-1.jpeg") %>" alt="Realtor 1">
+      <div class="realtors__details">
+        <h4 class="heading-4 heading-4--light">Erik Feinman</h4>
+        <p class="realtors__sold">245 houses sold</p>
+      </div>
+      <img src="<%= static_path(@conn, "/images/realtor-2.jpeg") %>" alt="Realtor 2">
+      <div class="realtors__details">
+        <h4 class="heading-4 heading-4--light">Kim Brown</h4>
+        <p class="realtors__sold">212 houses sold</p>
+      </div>
+      <img src="<%= static_path(@conn, "/images/realtor-3.jpeg") %>" alt="Realtor 3">
+      <div class="realtors__details">
+        <h4 class="heading-4 heading-4--light">Toby Ramsey</h4>
+        <p class="realtors__sold">198 houses sold</p>
+      </div>
+    </div>
   </div>
 
   <section class="features">
@@ -309,10 +336,17 @@
     <figure class="gallery__item gallery__item--14">
       <img class="gallery__img" src="<%= static_path(@conn, "/images/gal-14.jpeg") %>" alt="Gallery img 14">
     </figure>
-
   </section>
 
   <div class="footer">
-    Footer
+    <ul class="nav">
+      <li class="nav__item"><a class="nav__link" href="#">Find your dream home</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Request proposal</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Download home planner</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Contact us</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Submit your property</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Come work with us</a></li>
+    </ul>
+    <p class="copyright">Copyright &copy; 2018</p>
   </div>
 </div>
