@@ -1,9 +1,15 @@
 .homes {
   grid-column: 3 / 11;
+  @media only screen and (max-width: $breakpoint-lg) {
+    grid-column: 2 / 10;
+  }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
   margin: 15rem 0;
+  @media only screen and (max-width: $breakpoint-md) {
+    margin: 8rem 0;
+  }
 }
 
 .home {

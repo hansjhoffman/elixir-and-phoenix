@@ -13,7 +13,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
 ## TODO
-- [x] Found bug with sass-brunch where compiler doesn't recognized 'named' columns in grid operations. Had to use #'s instead
+- [x] Found bug with sass-brunch where compiler doesn't recognized 'named' columns in grid operations. Had to use #'s instead. This also made setting media breakpoints tedious b/c I had to go into each section and change the 'hard-coded' values 
 
 ## Screenshots
 ![Home Screen](.screenshots/combined.png)

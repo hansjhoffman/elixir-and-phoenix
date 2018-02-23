@@ -1,24 +1,52 @@
 .container {
   display: grid;
-  grid-template-rows: 80vh auto 40vw repeat(3, auto); //it's actually better to just specify columns only
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); //it's actually better to just specify columns only
   grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+  }
+
+  @media only screen and (max-width: $breakpoint-md) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
 }
 
 .features {
-  grid-column: 3 / 11;
   margin: 15rem 0;
-  display: grid; //because CSS subgrids aren't available yet
-  // grid-template-columns: repeat(3, 1fr); not responsive
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //responsive!! So cool! No media query required :)
-  grid-gap: 6rem;
-  align-items: start;
+
+  @supports (display: grid) {
+    grid-column: 3 / 11;
+    @media only screen and (max-width: $breakpoint-lg) {
+      grid-column: 2 / 10;
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+      margin: 8rem 0;
+    }
+    display: grid; //because CSS subgrids aren't available yet
+    // grid-template-columns: repeat(3, 1fr); not responsive
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //responsive!! So cool! No media query required :)
+    grid-gap: 6rem;
+    align-items: start;
+  }
+
 }
 
 .feature {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-row-gap: 1.5rem;
-  grid-column-gap: 2.5rem;
+  float: left;
+  width: 33.33333%;
+  margin-bottom: 6rem;
+
+  @supports (display: grid) {
+    width: auto;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+  }
+
 
   &__icon {
     fill: $color-primary;

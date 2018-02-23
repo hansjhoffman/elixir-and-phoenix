@@ -1,10 +1,18 @@
 .story {
   &__pictures {
-    background-image: 
+    background-image:
       linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)),
       url(/images/back.jpg);
-    grid-column: 2 / 7;
+      background-size: cover;
     display: grid;
+    grid-column: 2 / 7;
+    @media only screen and (max-width: $breakpoint-lg) {
+      grid-column: 1 / 6;
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+      grid-column: 1 / -1;
+      padding: 6rem;
+    }
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
@@ -15,6 +23,11 @@
     grid-row: 2 / 6;
     grid-column: 2 / 6;
     box-shadow: 0 2rem 5rem rgba($black, .1);
+
+    @media only screen and (max-width: $breakpoint-md) {
+      grid-row: 1 / -1;
+      grid-column: 1 / 5;
+    }
   }
 
   &__img--2 {
@@ -23,11 +36,23 @@
     grid-column: 4 / 7;
     z-index: 1;
     box-shadow: 0 2rem 5rem rgba($black, .2);
+
+    @media only screen and (max-width: $breakpoint-md) {
+      grid-row: 1 / -1;
+      width: 100%;
+    }
   }
 
   &__content {
     background-color: $grey-light-1;
     grid-column: 7 / -1;
+    @media only screen and (max-width: $breakpoint-lg) {
+      grid-column: 6 / -1;
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
     padding: 6rem 8vw; //don't hardcode 12rem left/right
 
     // flexbox implementation for 1 dimension
